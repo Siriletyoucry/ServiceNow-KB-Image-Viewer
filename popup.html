@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ServiceNow Image Previewer</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <img src="icons/icon48.png" class="logo" alt="logo" />
+        <h1 id="title"></h1>
+      </div>
+      <div class="info-section">
+        <h3 id="helpTitle"></h3>
+        <ul>
+          <li id="helpText"></li>
+        </ul>
+      </div>
+      <div class="controls-section toggle-section">
+        <label for="globalEnableSwitch" id="enableLabel"></label>
+        <label class="switch">
+          <input type="checkbox" id="globalEnableSwitch">
+          <span class="slider round"></span>
+        </label>
+      </div>
+      <div class="controls-section">
+        <label for="langSelect" id="langLabel"></label>
+        <select id="langSelect">
+          <option value="auto">Auto</option>
+          <option value="en">English</option>
+          <option value="zh">中文</option>
+        </select>
+        <label for="themeSelect" id="themeLabel"></label>
+        <select id="themeSelect">
+          <option value="auto">Auto</option>
+          <option value="dark">Dark</option>
+          <option value="light">Light</option>
+        </select>
+      </div>
+      <div class="controls-section">
+        <label for="sitesInput" id="sitesLabel"></label>
+        <input id="sitesInput" type="text" style="flex:2;" placeholder="service-now.com,example.com">
+        <button class="btn primary" id="saveSitesButton"></button>
+      </div>
+      <div class="controls-section">
+          <button class="btn primary" id="manualInjectButton"></button>
+      </div>
+      <div class="footer">
+        <p id="version"></p>
+      </div>
+    </div>
+    <script src="config.js"></script>
+    <script src="i18n.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>
